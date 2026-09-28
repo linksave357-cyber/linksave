@@ -21,12 +21,6 @@
     }, 2500);
   }
 
-  function openSmartlink() {
-    if (CONFIG.smartlinkUrl && typeof window !== "undefined") {
-      window.open(CONFIG.smartlinkUrl, "_blank", "noopener,noreferrer");
-    }
-  }
-
   function refreshIframe() {
     if (iframeRef) {
       isAutoRefreshing = true;
@@ -144,7 +138,7 @@
       <!-- Quick Dropdown Expand Buttons -->
       <div class="grid grid-cols-2 gap-3 pt-1">
         <button
-          on:click={() => { triggerExpand(); openSmartlink(); }}
+          on:click={triggerExpand}
           type="button"
           class="w-full py-2.5 px-3 rounded-xl border-2 border-cyan-400 bg-slate-950/80 hover:bg-cyan-500/10 text-white font-bold text-xs sm:text-sm transition-all duration-200 flex items-center justify-center active:scale-95 shadow-lg shadow-cyan-500/10 cursor-pointer"
         >
@@ -152,7 +146,7 @@
         </button>
 
         <button
-          on:click={() => { triggerExpand(); openSmartlink(); }}
+          on:click={triggerExpand}
           type="button"
           class="w-full py-2.5 px-3 rounded-xl border-2 border-emerald-500 bg-slate-950/80 hover:bg-emerald-500/10 text-white font-bold text-xs sm:text-sm transition-all duration-200 flex items-center justify-center active:scale-95 shadow-lg shadow-emerald-500/10 cursor-pointer"
         >
