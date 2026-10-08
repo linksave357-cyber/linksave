@@ -19,7 +19,12 @@ export default defineConfig({
         about: resolve(__dirname, 'about/index.html'),
         contact: resolve(__dirname, 'contact/index.html'),
         privacyPolicy: resolve(__dirname, 'privacy-policy/index.html'),
-        terms: resolve(__dirname, 'terms/index.html')
+        terms: resolve(__dirname, 'terms/index.html'),
+        instagramReelsDownloader: resolve(__dirname, 'instagram-reels-downloader/index.html'),
+        tiktokVideoDownloader: resolve(__dirname, 'tiktok-video-downloader-no-watermark/index.html'),
+        pinterestVideoDownloader: resolve(__dirname, 'pinterest-video-downloader/index.html'),
+        facebookVideoDownloader: resolve(__dirname, 'facebook-video-downloader/index.html'),
+        linkedinVideoDownloader: resolve(__dirname, 'linkedin-video-downloader/index.html')
       }
     }
   }
