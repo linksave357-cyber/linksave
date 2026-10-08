@@ -38,8 +38,8 @@
 </html>`;
 </script>
 
-<div class="my-8 flex justify-center text-center overflow-x-auto w-full" data-slot-type={slotType} data-ad-type={type}>
-  <div class="w-full max-w-4xl bg-slate-900/60 border border-slate-800/80 rounded-2xl p-3 flex flex-col items-center justify-center {isRectangle ? 'min-h-[280px]' : 'min-h-[120px]'} shadow-inner relative overflow-hidden">
+<div class="my-6 flex justify-center text-center overflow-x-auto {isRectangle ? 'w-full sm:w-auto inline-flex' : 'w-full'}" data-slot-type={slotType} data-ad-type={type}>
+  <div class="w-full {isRectangle ? 'max-w-[340px] min-w-[300px]' : 'max-w-[760px]'} bg-slate-900/60 border border-slate-800/80 rounded-2xl p-3 flex flex-col items-center justify-center {isRectangle ? 'min-h-[280px]' : 'min-h-[120px]'} shadow-inner relative overflow-hidden">
     <div class="w-full flex items-center justify-between px-2 mb-2">
       <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-500">
         {isReferral ? 'Monetization Partner' : 'Advertisement'}

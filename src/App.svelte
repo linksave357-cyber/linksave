@@ -64,14 +64,12 @@
     <!-- Frequently Asked Questions -->
     <FAQ />
 
-    <!-- Partner Banner: 300x250 Animated GIF Referral Unit -->
-    <section class="max-w-7xl mx-auto px-4">
-      <AdBanner slotType="rectangle" type="referral" />
-    </section>
-
-    <!-- Bottom Page Banner: Dynamic Rectangle -->
-    <section class="max-w-7xl mx-auto px-4">
-      <AdBanner slotType="rectangle" type="ad" />
+    <!-- Dual Bottom Banners: Partner Referral & Dynamic Ad Units -->
+    <section class="max-w-7xl mx-auto px-4 my-6">
+      <div class="flex flex-wrap items-center justify-center gap-6">
+        <AdBanner slotType="rectangle" type="referral" />
+        <AdBanner slotType="rectangle" type="ad" />
+      </div>
     </section>
   </main>
 

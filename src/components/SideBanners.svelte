@@ -5,7 +5,7 @@
   export let leftKey = CONFIG?.adsterra?.skyscraperLeftKey || CONFIG?.adsterra?.bannerKey || 'aac61e386ccb0a0d5fc7c47dfae348c5';
   export let rightKey = CONFIG?.adsterra?.skyscraperRightKey || CONFIG?.adsterra?.bannerKey || 'aac61e386ccb0a0d5fc7c47dfae348c5';
   /** @type {'ad' | 'referral'} */
-  export let leftType = 'ad';
+  export let leftType = 'referral';
   /** @type {'ad' | 'referral'} */
   export let rightType = 'referral';
   export let width = 160;
@@ -164,14 +164,14 @@
   .side-banner-rail {
     display: none;
     position: fixed;
-    top: 88px;
-    z-index: 30;
+    top: 96px;
+    z-index: 25;
     pointer-events: auto;
     transition: opacity 0.2s ease;
   }
 
   /* Only display on desktop displays with adequate width and height */
-  @media (min-width: 1360px) and (min-height: 680px) {
+  @media (min-width: 1440px) and (min-height: 700px) {
     .side-banner-rail {
       display: flex;
       flex-direction: column;
@@ -179,11 +179,12 @@
   }
 
   .side-banner-left {
-    left: 8px;
+    left: 12px;
   }
 
   .side-banner-right {
-    right: 8px;
+    right: 12px;
+    top: 140px; /* Clears top-right floating social bar notifications */
   }
 
   @media (min-width: 1536px) {
