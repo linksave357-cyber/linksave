@@ -4,11 +4,18 @@
 
   export let leftKey = CONFIG?.adsterra?.skyscraperLeftKey || CONFIG?.adsterra?.bannerKey || 'aac61e386ccb0a0d5fc7c47dfae348c5';
   export let rightKey = CONFIG?.adsterra?.skyscraperRightKey || CONFIG?.adsterra?.bannerKey || 'aac61e386ccb0a0d5fc7c47dfae348c5';
+  /** @type {'ad' | 'referral'} */
+  export let leftType = 'ad';
+  /** @type {'ad' | 'referral'} */
+  export let rightType = 'referral';
   export let width = 160;
   export let height = 600;
 
   let showLeft = true;
   let showRight = true;
+
+  $: referralUrl = CONFIG?.referral?.inviteUrl || 'https://beta.publishers.adsterra.com/referral/jd2AQmNfHi';
+  $: referralSkyscraperSrc = CONFIG?.referral?.banners?.skyscraper?.src || 'https://landings-cdn.adsterratech.com/referralBanners/gif/160x600_adsterra_reff.gif';
 
   /** @param {string} key */
   function generateSrcdoc(key) {
@@ -57,7 +64,7 @@
   >
     <div class="banner-card">
       <div class="banner-header">
-        <span class="banner-tag">Ad</span>
+        <span class="banner-tag">{leftType === 'referral' ? 'Partner' : 'Ad'}</span>
         <button
           type="button"
           class="banner-close"
@@ -68,16 +75,34 @@
         </button>
       </div>
       <div class="banner-body">
-        <iframe
-          srcdoc={leftSrcdoc}
-          title="Left Skyscraper Advertisement"
-          width={width}
-          height={height}
-          class="ad-iframe"
-          scrolling="no"
-          loading="lazy"
-          sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-        ></iframe>
+        {#if leftType === 'referral'}
+          <a
+            href={referralUrl}
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            class="block w-[160px] h-[600px] hover:opacity-90 transition-opacity"
+          >
+            <img
+              src={referralSkyscraperSrc}
+              alt="Join Adsterra Monetization Network"
+              width={width}
+              height={height}
+              loading="lazy"
+              class="w-[160px] h-[600px] object-cover block"
+            />
+          </a>
+        {:else}
+          <iframe
+            srcdoc={leftSrcdoc}
+            title="Left Skyscraper Advertisement"
+            width={width}
+            height={height}
+            class="ad-iframe"
+            scrolling="no"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+          ></iframe>
+        {/if}
       </div>
     </div>
   </aside>
@@ -91,7 +116,7 @@
   >
     <div class="banner-card">
       <div class="banner-header">
-        <span class="banner-tag">Ad</span>
+        <span class="banner-tag">{rightType === 'referral' ? 'Partner' : 'Ad'}</span>
         <button
           type="button"
           class="banner-close"
@@ -102,16 +127,34 @@
         </button>
       </div>
       <div class="banner-body">
-        <iframe
-          srcdoc={rightSrcdoc}
-          title="Right Skyscraper Advertisement"
-          width={width}
-          height={height}
-          class="ad-iframe"
-          scrolling="no"
-          loading="lazy"
-          sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-        ></iframe>
+        {#if rightType === 'referral'}
+          <a
+            href={referralUrl}
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            class="block w-[160px] h-[600px] hover:opacity-90 transition-opacity"
+          >
+            <img
+              src={referralSkyscraperSrc}
+              alt="Join Adsterra Monetization Network"
+              width={width}
+              height={height}
+              loading="lazy"
+              class="w-[160px] h-[600px] object-cover block"
+            />
+          </a>
+        {:else}
+          <iframe
+            srcdoc={rightSrcdoc}
+            title="Right Skyscraper Advertisement"
+            width={width}
+            height={height}
+            class="ad-iframe"
+            scrolling="no"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+          ></iframe>
+        {/if}
       </div>
     </div>
   </aside>

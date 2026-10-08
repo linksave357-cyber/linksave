@@ -35,33 +35,43 @@
   <main>
     <Hero />
 
-    <!-- Google AdSense Unit 1 -->
+    <!-- Top Banner: Dynamic Leaderboard -->
     <section class="max-w-7xl mx-auto px-4">
-      <AdBanner slotType="leaderboard" />
+      <AdBanner slotType="leaderboard" type="ad" />
     </section>
 
     <!-- 3-Step Process -->
     <HowItWorks />
 
-    <!-- Google AdSense Unit 2 -->
+    <!-- Partner Banner: 720x90 Animated GIF Referral Unit -->
     <section class="max-w-7xl mx-auto px-4">
-      <AdBanner slotType="rectangle" />
+      <AdBanner slotType="leaderboard" type="referral" />
     </section>
 
     <!-- Value Propositions & Features -->
     <Features />
 
-    <!-- Banner Ad Unit 3 (Mid-Page Leaderboard) -->
+    <!-- Content Banner: Dynamic Rectangle -->
     <section class="max-w-7xl mx-auto px-4">
-      <AdBanner slotType="leaderboard" />
+      <AdBanner slotType="rectangle" type="ad" />
+    </section>
+
+    <!-- Mid-Page Banner: Dynamic Leaderboard -->
+    <section class="max-w-7xl mx-auto px-4">
+      <AdBanner slotType="leaderboard" type="ad" />
     </section>
 
     <!-- Frequently Asked Questions -->
     <FAQ />
 
-    <!-- Banner Ad Unit 4 (Bottom-Page Rectangle) -->
+    <!-- Partner Banner: 300x250 Animated GIF Referral Unit -->
     <section class="max-w-7xl mx-auto px-4">
-      <AdBanner slotType="rectangle" />
+      <AdBanner slotType="rectangle" type="referral" />
+    </section>
+
+    <!-- Bottom Page Banner: Dynamic Rectangle -->
+    <section class="max-w-7xl mx-auto px-4">
+      <AdBanner slotType="rectangle" type="ad" />
     </section>
   </main>
 
