@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinkSave</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    body {
+      width: 320px;
+      background: #020617;
+      color: #f8fafc;
+      padding: 16px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .logo-badge {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+    }
+    .logo-badge svg {
+      width: 18px;
+      height: 18px;
+      stroke: white;
+    }
+    .title-group h1 {
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .title-group h1 span {
+      color: #3b82f6;
+    }
+    .title-group p {
+      font-size: 11px;
+      color: #94a3b8;
+    }
+    .input-box {
+      width: 100%;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 10px 12px;
+      color: #f8fafc;
+      font-size: 12px;
+      outline: none;
+      margin-bottom: 10px;
+      transition: border-color 0.2s;
+    }
+    .input-box:focus {
+      border-color: #3b82f6;
+    }
+    .btn-primary {
+      width: 100%;
+      height: 38px;
+      background: linear-gradient(135deg, #2563eb, #4f46e5);
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+      transition: all 0.2s;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #1d4ed8, #4338ca);
+      transform: translateY(-1px);
+    }
+    .btn-primary svg {
+      width: 15px;
+      height: 15px;
+      stroke: currentColor;
+    }
+    .divider {
+      height: 1px;
+      background: #1e293b;
+      margin: 14px 0 12px;
+    }
+    .tools-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748b;
+      margin-bottom: 8px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+    .tool-link {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s;
+    }
+    .tool-link:hover {
+      background: #1e293b;
+      border-color: #3b82f6;
+      color: #ffffff;
+    }
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+    .footer {
+      margin-top: 12px;
+      text-align: center;
+      font-size: 10px;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" x2="12" y1="15" y2="3"/>
+      </svg>
+    </div>
+    <div class="title-group">
+      <h1>Link<span>Save</span></h1>
+      <p>Instant Video & Audio Downloader</p>
+    </div>
+  </div>
+
+  <input type="text" id="video-url" class="input-box" placeholder="Paste video link or auto-detected URL..." />
+
+  <button id="download-btn" class="btn-primary">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" x2="12" y1="15" y2="3"/>
+    </svg>
+    <span>Download with LinkSave</span>
+  </button>
+
+  <div class="divider"></div>
+
+  <div class="tools-label">Direct Tools</div>
+  <div class="grid">
+    <a href="https://linksaves.com/youtube-video-downloader/" target="_blank" class="tool-link">
+      <span class="dot" style="background:#ef4444;"></span> YouTube
+    </a>
+    <a href="https://linksaves.com/instagram-reels-downloader/" target="_blank" class="tool-link">
+      <span class="dot" style="background:#ec4899;"></span> Instagram
+    </a>
+    <a href="https://linksaves.com/tiktok-video-downloader-no-watermark/" target="_blank" class="tool-link">
+      <span class="dot" style="background:#06b6d4;"></span> TikTok
+    </a>
+    <a href="https://linksaves.com/youtube-to-mp3/" target="_blank" class="tool-link">
+      <span class="dot" style="background:#8b5cf6;"></span> MP3 Audio
+    </a>
+  </div>
+
+  <div class="footer">100% Free & Unlimited • linksaves.com</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

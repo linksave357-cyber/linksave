@@ -1,5 +1,5 @@
 <script>
-  import { onDestroy } from "svelte";
+  import { onMount, onDestroy } from "svelte";
   import { Sparkles, RefreshCw, ShieldAlert } from "lucide-svelte";
   import { CONFIG } from "../lib/config.js";
 
@@ -12,6 +12,16 @@
 
   /** @type {HTMLIFrameElement | null} */
   let iframeRef = null;
+
+  onMount(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const queryUrl = params.get("url");
+      if (queryUrl) {
+        videoUrl = queryUrl;
+      }
+    }
+  });
 
   function triggerExpand() {
     isExpanded = true;
