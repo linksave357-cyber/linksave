@@ -117,7 +117,7 @@ function createPNG(size) {
 const outDir = path.resolve('extension/icons');
 fs.mkdirSync(outDir, { recursive: true });
 
-[16, 48, 128].forEach(size => {
+[16, 48, 128, 300].forEach(size => {
   const pngBuf = createPNG(size);
   const outPath = path.join(outDir, `icon${size}.png`);
   fs.writeFileSync(outPath, pngBuf);

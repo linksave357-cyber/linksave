@@ -13,6 +13,14 @@ export const CONFIG = {
   // Adsterra Smartlink (smart-link-3466727)
   smartlinkUrl: 'https://garretebonylosing.com/jhky4egutd?key=d9ca9399efd5ec18febfadefd48f7ed5',
 
+  // Monetag (PropellerAds) Secondary Ad Network Settings
+  monetag: {
+    enabled: false,
+    verificationCode: '', // Enter your Monetag verification tag here
+    scriptUrl: '',        // e.g. https://alwingulla.com/88/tag.min.js
+    zoneId: ''            // e.g. 1234567
+  },
+
   appName: 'LinkSave',
   version: '1.0.0-MVP'
 };
