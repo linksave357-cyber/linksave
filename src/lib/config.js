@@ -20,6 +20,13 @@ export const CONFIG = {
     zoneId: '292461'
   },
 
+  // Adsterra Display & Skyscraper Banners
+  adsterra: {
+    bannerKey: 'aac61e386ccb0a0d5fc7c47dfae348c5',
+    skyscraperLeftKey: 'aac61e386ccb0a0d5fc7c47dfae348c5',
+    skyscraperRightKey: 'aac61e386ccb0a0d5fc7c47dfae348c5'
+  },
+
   appName: 'LinkSave',
   version: '1.0.0-MVP'
 };

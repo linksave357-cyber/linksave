@@ -6,6 +6,7 @@
   import FAQ from './components/FAQ.svelte';
   import Footer from './components/Footer.svelte';
   import AdBanner from './components/AdBanner.svelte';
+  import SideBanners from './components/SideBanners.svelte';
   import LegalModal from './components/LegalModal.svelte';
 
   /** @type {'privacy' | 'terms' | 'about' | 'contact' | null} */
@@ -23,7 +24,10 @@
   }
 </script>
 
-<div class="min-h-screen bg-slate-950 text-slate-100 selection:bg-blue-600 selection:text-white">
+<div class="min-h-screen bg-slate-950 text-slate-100 selection:bg-blue-600 selection:text-white relative">
+  <!-- Left & Right Skyscraper Side Rail Banners -->
+  <SideBanners />
+
   <!-- Top Navigation -->
   <Navbar />
 
@@ -47,8 +51,18 @@
     <!-- Value Propositions & Features -->
     <Features />
 
+    <!-- Banner Ad Unit 3 (Mid-Page Leaderboard) -->
+    <section class="max-w-7xl mx-auto px-4">
+      <AdBanner slotType="leaderboard" />
+    </section>
+
     <!-- Frequently Asked Questions -->
     <FAQ />
+
+    <!-- Banner Ad Unit 4 (Bottom-Page Rectangle) -->
+    <section class="max-w-7xl mx-auto px-4">
+      <AdBanner slotType="rectangle" />
+    </section>
   </main>
 
   <!-- Footer with Legal Links -->
