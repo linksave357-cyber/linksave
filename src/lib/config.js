@@ -15,10 +15,9 @@ export const CONFIG = {
 
   // Monetag (PropellerAds) Secondary Ad Network Settings
   monetag: {
-    enabled: false,
-    verificationCode: '', // Enter your Monetag verification tag here
-    scriptUrl: '',        // e.g. https://alwingulla.com/88/tag.min.js
-    zoneId: ''            // e.g. 1234567
+    enabled: true,
+    scriptUrl: 'https://quge5.com/88/tag.min.js',
+    zoneId: '292461'
   },
 
   appName: 'LinkSave',
