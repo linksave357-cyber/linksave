@@ -13,11 +13,11 @@ export const CONFIG = {
   // Adsterra Smartlink (smart-link-3466727)
   smartlinkUrl: 'https://garretebonylosing.com/jhky4egutd?key=d9ca9399efd5ec18febfadefd48f7ed5',
 
-  // Monetag (PropellerAds) Secondary Ad Network Settings
+  // Monetag disabled to eliminate intrusive onclick and popup ads
   monetag: {
-    enabled: true,
-    scriptUrl: 'https://quge5.com/88/tag.min.js',
-    zoneId: '292461'
+    enabled: false,
+    scriptUrl: '',
+    zoneId: ''
   },
 
   // Adsterra Display & Skyscraper Banners
