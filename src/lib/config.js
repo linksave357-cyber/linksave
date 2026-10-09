@@ -24,7 +24,14 @@ export const CONFIG = {
   adsterra: {
     bannerKey: 'aac61e386ccb0a0d5fc7c47dfae348c5',
     skyscraperLeftKey: 'aac61e386ccb0a0d5fc7c47dfae348c5',
-    skyscraperRightKey: 'aac61e386ccb0a0d5fc7c47dfae348c5'
+    skyscraperRightKey: 'aac61e386ccb0a0d5fc7c47dfae348c5',
+    bottomBanners: [
+      { key: '51c98c7aa5238d0b1a5c89df57d76b38', width: 468, height: 60, name: 'Standard Banner' },
+      { key: 'f7e6c176369f08d9c6d9583ab92cd815', width: 300, height: 250, name: 'Medium Rectangle' },
+      { key: 'f4f050a94fd8eb52f74dd6f2b2e6a7de', width: 160, height: 600, name: 'Wide Skyscraper' },
+      { key: 'abd72035fe8df44719891373f6af85f8', width: 160, height: 300, name: 'Half Skyscraper' },
+      { key: 'd1dfc5353b46af042f806c8c2c1108dc', width: 320, height: 50, name: 'Mobile Leaderboard' }
+    ]
   },
 
   // Adsterra Referral Program (5% Lifetime Revenue)

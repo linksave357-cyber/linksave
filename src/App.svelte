@@ -7,6 +7,7 @@
   import Footer from './components/Footer.svelte';
   import AdBanner from './components/AdBanner.svelte';
   import SideBanners from './components/SideBanners.svelte';
+  import BottomBanners from './components/BottomBanners.svelte';
   import LegalModal from './components/LegalModal.svelte';
 
   /** @type {'privacy' | 'terms' | 'about' | 'contact' | null} */
@@ -64,13 +65,8 @@
     <!-- Frequently Asked Questions -->
     <FAQ />
 
-    <!-- Dual Bottom Banners: Partner Referral & Dynamic Ad Units -->
-    <section class="max-w-7xl mx-auto px-4 my-6">
-      <div class="flex flex-wrap items-center justify-center gap-6">
-        <AdBanner slotType="rectangle" type="referral" />
-        <AdBanner slotType="rectangle" type="ad" />
-      </div>
-    </section>
+    <!-- Bottom Adsterra Banner Units -->
+    <BottomBanners />
   </main>
 
   <!-- Footer with Legal Links -->
