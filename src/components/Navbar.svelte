@@ -36,7 +36,7 @@
             LinkSave
           </span>
           <span class="block text-[10px] font-semibold text-blue-400/90 tracking-wider uppercase -mt-1">
-            Video Downloader
+            Video Converter
           </span>
         </div>
       </a>
@@ -47,31 +47,39 @@
           href="{baseUrl}youtube-video-downloader/"
           class="px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-900/80 rounded-lg transition-colors"
         >
-          Video Downloader
+          Video Converter
         </a>
         <a 
           href="{baseUrl}youtube-to-mp3/"
           class="px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-900/80 rounded-lg transition-colors"
         >
-          YouTube to MP3
+          Audio (MP3)
         </a>
         <a 
           href="{baseUrl}youtube-to-mp4/"
           class="px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-900/80 rounded-lg transition-colors"
         >
-          YouTube to MP4
+          Video (MP4)
         </a>
         <a 
           href="{baseUrl}youtube-shorts-downloader/"
           class="px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-900/80 rounded-lg transition-colors"
         >
-          Shorts Downloader
+          Shorts Converter
         </a>
         <a 
           href="{baseUrl}how-to-download-youtube-videos/"
           class="px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-900/80 rounded-lg transition-colors"
         >
-          Guide
+          Media Guide
+        </a>
+        <a 
+          href="https://microsoftedge.microsoft.com/addons/detail/linksave-video-audio-/ipneiigdjchdffpkailbdajdihcpgigd"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-3 py-2 text-xs font-semibold text-blue-400 hover:text-blue-300 hover:bg-blue-500/10 rounded-lg transition-colors flex items-center gap-1"
+        >
+          <span>Edge Add-on</span>
         </a>
       </nav>
 
@@ -86,7 +94,7 @@
           class="relative inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-xs sm:text-sm shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/30 hover:from-blue-500 hover:to-indigo-500 transition-all duration-200 cursor-pointer"
         >
           <Sparkles class="w-4 h-4" />
-          <span>Save Video</span>
+          <span>Convert Video</span>
         </button>
       </div>
 
@@ -139,6 +147,14 @@
         class="block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-white"
       >
         Guide
+      </a>
+      <a
+        href="https://microsoftedge.microsoft.com/addons/detail/linksave-video-audio-/ipneiigdjchdffpkailbdajdihcpgigd"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block px-4 py-3 rounded-lg text-base font-semibold text-blue-400 hover:bg-slate-900"
+      >
+        Edge Extension (Free)
       </a>
       <a
         href="{baseUrl}about/"

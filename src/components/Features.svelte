@@ -11,7 +11,7 @@
     },
     {
       title: 'Direct Stream Extraction',
-      description: 'Download clean YouTube videos and Shorts instantly with fast stream processing.',
+      description: 'Extract audio from public links and convert web video streams with fast cloud processing.',
       icon: Zap,
       color: 'text-blue-400',
       bg: 'bg-blue-500/10'
@@ -25,7 +25,7 @@
     },
     {
       title: 'Audio MP3 Converter',
-      description: 'Extract background audio or music tracks directly from video links into high-bitrate MP3 format.',
+      description: 'Extract audio from public links directly into high-bitrate MP3 format with our format transcoder.',
       icon: Music,
       color: 'text-purple-400',
       bg: 'bg-purple-500/10'

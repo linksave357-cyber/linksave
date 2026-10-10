@@ -1,5 +1,13 @@
-// Clean up and unregister any previously cached Monetag push notification service worker
-self.addEventListener('install', () => self.skipWaiting());
-self.addEventListener('activate', () => {
-  self.registration.unregister();
+// LinkSave Service Worker - Enables PWA installation & Android Web Share Target
+self.addEventListener('install', () => {
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(self.clients.claim());
+});
+
+// Required fetch handler for PWA installability & WebAPK registration
+self.addEventListener('fetch', (event) => {
+  event.respondWith(fetch(event.request));
 });

@@ -13,15 +13,75 @@
   /** @type {HTMLIFrameElement | null} */
   let iframeRef = null;
 
+  /** @type {any} */
+  let deferredPrompt = null;
+  let isInstalled = false;
+  let showIosInstructions = false;
+  let isEdgeUser = false;
+
   onMount(() => {
     if (typeof window !== "undefined") {
+      isEdgeUser = /Edg\//i.test(navigator.userAgent);
       const params = new URLSearchParams(window.location.search);
-      const queryUrl = params.get("url");
-      if (queryUrl) {
-        videoUrl = queryUrl;
+      const rawUrl = params.get("url") || "";
+      const rawText = params.get("text") || "";
+      const rawTitle = params.get("title") || "";
+
+      if (rawUrl && /^https?:\/\//i.test(rawUrl.trim())) {
+        videoUrl = rawUrl.trim();
+      } else {
+        const combined = `${rawText} ${rawTitle}`;
+        const match = combined.match(/https?:\/\/[^\s]+/i);
+        if (match) {
+          videoUrl = match[0];
+        } else if (rawUrl) {
+          videoUrl = rawUrl;
+        }
       }
+
+      if (
+        window.matchMedia('(display-mode: standalone)').matches ||
+        /** @type {any} */ (window.navigator).standalone === true
+      ) {
+        isInstalled = true;
+      }
+
+      const onBeforeInstall = (/** @type {{ preventDefault: () => void; }} */ e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+      };
+
+      const onAppInstalled = () => {
+        isInstalled = true;
+        deferredPrompt = null;
+      };
+
+      window.addEventListener('beforeinstallprompt', onBeforeInstall);
+      window.addEventListener('appinstalled', onAppInstalled);
+
+      return () => {
+        window.removeEventListener('beforeinstallprompt', onBeforeInstall);
+        window.removeEventListener('appinstalled', onAppInstalled);
+      };
     }
   });
+
+  async function handleInstallClick() {
+    if (deferredPrompt) {
+      try {
+        deferredPrompt.prompt();
+        const choice = await deferredPrompt.userChoice;
+        if (choice && choice.outcome === 'accepted') {
+          isInstalled = true;
+        }
+        deferredPrompt = null;
+      } catch (err) {
+        console.error(err);
+      }
+    } else {
+      showIosInstructions = !showIosInstructions;
+    }
+  }
 
   function triggerExpand() {
     isExpanded = true;
@@ -76,7 +136,7 @@
           <h2
             class="text-sm sm:text-lg font-extrabold text-white leading-tight flex flex-wrap items-center gap-2"
           >
-            <span>LinkSave Downloader</span>
+            <span>LinkSave Converter</span>
             <span
               class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold"
             >
@@ -87,7 +147,7 @@
             </span>
           </h2>
           <p class="text-[11px] sm:text-xs text-slate-400">
-            Convert & download HD videos & audio streams instantly
+            Format transcoder &amp; audio extractor for public links
           </p>
         </div>
       </div>
@@ -103,7 +163,7 @@
           ></span>
           <span
             class="font-semibold text-slate-200 text-[11px] sm:text-xs truncate"
-            >Direct Stream Converter</span
+            >Format Transcoder Engine</span
           >
         </div>
 
@@ -163,6 +223,87 @@
           MP3 / MP4
         </button>
       </div>
+
+      <!-- Install LinkSave as App Banner (<1mb size only) -->
+      {#if !isInstalled}
+        <div
+          class="mt-3 p-4 sm:p-5 rounded-2xl bg-black/70 border border-slate-800 shadow-xl text-left transition-all"
+        >
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <h3 class="text-white font-bold text-sm sm:text-base tracking-tight">
+              Install LinkSave as App (<span class="text-emerald-400">&lt;1mb</span> size only)
+            </h3>
+            <button
+              type="button"
+              on:click={handleInstallClick}
+              class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-[#16a34a] hover:bg-[#15803d] active:scale-95 text-white font-bold text-xs sm:text-sm shadow-md shadow-emerald-900/30 transition-all cursor-pointer shrink-0"
+            >
+              Add to Home Screen
+            </button>
+          </div>
+
+          <div class="border-t border-slate-800/80 my-3"></div>
+
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+            Install LinkSave on your device for instant access, a full-screen experience, and faster loading times without opening your browser.
+          </p>
+
+          {#if showIosInstructions}
+            <div
+              class="mt-3 p-3 rounded-xl bg-slate-900 border border-slate-700/80 text-xs text-slate-300 flex items-start gap-2.5 animate-fade-in"
+            >
+              <span class="text-emerald-400 text-base leading-none">📱</span>
+              <div>
+                <span class="font-semibold text-white">How to Install:</span>
+                Tap your browser menu (or the <strong class="text-white">Share</strong> button in Safari), then select <strong class="text-emerald-400">"Add to Home Screen"</strong>.
+              </div>
+            </div>
+          {/if}
+        </div>
+      {/if}
+
+      <!-- Detected Microsoft Edge Callout Banner -->
+      {#if isEdgeUser}
+        <div
+          class="mt-3 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-blue-950/70 via-slate-900/90 to-indigo-950/70 border border-blue-500/40 shadow-xl text-left transition-all"
+        >
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-blue-500/20 border border-blue-400/30 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" x2="12" y1="15" y2="3"/>
+                </svg>
+              </div>
+              <div>
+                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 text-[10px] font-bold uppercase tracking-wider mb-1">
+                  Detected Microsoft Edge
+                </span>
+                <h3 class="text-white font-bold text-sm sm:text-base tracking-tight">
+                  Download Videos with 1-Click using LinkSave Extension
+                </h3>
+              </div>
+            </div>
+
+            <a
+              href="https://microsoftedge.microsoft.com/addons/detail/linksave-video-audio-/ipneiigdjchdffpkailbdajdihcpgigd"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 active:scale-95 text-white font-bold text-xs sm:text-sm shadow-md shadow-blue-600/30 transition-all cursor-pointer shrink-0"
+            >
+              <span>Get on Edge Add-ons</span>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+
+          <div class="border-t border-slate-800/80 my-3"></div>
+
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+            Adds a native "Download" button right on YouTube and Instagram videos so you never have to copy-paste URLs.
+          </p>
+        </div>
+      {/if}
     </div>
 
     <div

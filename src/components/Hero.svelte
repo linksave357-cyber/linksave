@@ -17,12 +17,12 @@
     <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight max-w-4xl mx-auto leading-[1.15]">
       ONLINE VIDEO <br class="hidden sm:block" />
       <span class="bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
-        DOWNLOADER
+        CONVERTER
       </span>
     </h1>
 
     <p class="mt-6 text-base sm:text-xl text-slate-400 max-w-2xl mx-auto font-normal leading-relaxed">
-      Save high-quality videos from supported platforms. Just paste a link and get your media instantly.
+      Fast format transcoder to convert public media and extract audio from public links effortlessly.
     </p>
 
     <div class="mt-6 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm font-semibold text-slate-300">

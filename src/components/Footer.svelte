@@ -38,6 +38,7 @@
           <li><button on:click={() => scrollToSection('downloader')} class="hover:text-white transition">Downloader Engine</button></li>
           <li><button on:click={() => scrollToSection('how-it-works')} class="hover:text-white transition">How It Works</button></li>
           <li><button on:click={() => scrollToSection('features')} class="hover:text-white transition">Features</button></li>
+          <li><a href="https://microsoftedge.microsoft.com/addons/detail/linksave-video-audio-/ipneiigdjchdffpkailbdajdihcpgigd" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition">Edge Browser Add-on</a></li>
         </ul>
       </div>
 

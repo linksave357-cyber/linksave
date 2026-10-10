@@ -6,12 +6,12 @@
 
   const faqs = [
     {
-      q: 'How to convert YouTube to MP3 320kbps for free?',
-      a: 'Paste any YouTube link into LinkSave, click Convert, and choose high-quality 320kbps MP3 audio format to save the sound file instantly.'
+      q: 'How to extract audio from public links to MP3 for free?',
+      a: 'Paste any public video link into LinkSave, click Convert, and choose high-quality 320kbps MP3 audio format to save the sound file instantly.'
     },
     {
-      q: 'How to download YouTube Shorts videos online?',
-      a: 'Copy the YouTube Shorts URL from your browser or app, paste it into the LinkSave converter box, and click Download.'
+      q: 'How does the online video converter work?',
+      a: 'Copy the public media link from your browser or app, paste it into the LinkSave converter box, and select your preferred format.'
     },
     {
       q: 'Is LinkSave free?',

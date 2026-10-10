@@ -1,6 +1,7 @@
 <script>
   import Navbar from './components/Navbar.svelte';
   import Hero from './components/Hero.svelte';
+  import EdgeExtensionSection from './components/EdgeExtensionSection.svelte';
   import HowItWorks from './components/HowItWorks.svelte';
   import Features from './components/Features.svelte';
   import FAQ from './components/FAQ.svelte';
@@ -35,6 +36,9 @@
   <!-- Main Hero & Downloader Engine Focus -->
   <main>
     <Hero />
+
+    <!-- Official Microsoft Edge Extension Showcase -->
+    <EdgeExtensionSection />
 
     <!-- Top Banner: Dynamic Leaderboard -->
     <section class="max-w-7xl mx-auto px-4">

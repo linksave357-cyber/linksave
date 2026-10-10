@@ -8,7 +8,7 @@
     { name: 'Facebook', tag: 'Public Videos', bgColor: 'bg-blue-600/10 border-blue-600/20 text-blue-400', icon: '📘', formats: 'HD & SD MP4' },
     { name: 'Pinterest', tag: 'Idea Pins', bgColor: 'bg-red-600/10 border-red-600/20 text-red-400', icon: '📌', formats: 'Video Clips' },
     { name: 'Reddit', tag: 'Video & Audio', bgColor: 'bg-orange-500/10 border-orange-500/20 text-orange-400', icon: '🤖', formats: 'Merged Audio MP4' },
-    { name: 'YouTube*', tag: 'Shorts & Clips', bgColor: 'bg-red-500/10 border-red-500/20 text-red-400', icon: '▶️', formats: 'MP4 & MP3' },
+    { name: 'Public Web Videos', tag: 'Clips & Streams', bgColor: 'bg-red-500/10 border-red-500/20 text-red-400', icon: '▶️', formats: 'MP4 & MP3' },
     { name: 'Vimeo & Threads', tag: 'HD Clips', bgColor: 'bg-sky-500/10 border-sky-500/20 text-sky-400', icon: '🎬', formats: 'Full HD' }
   ];
 </script>

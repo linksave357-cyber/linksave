@@ -1,7 +1,7 @@
 {
   "short_name": "LinkSave",
-  "name": "LinkSave — Free Online Video Downloader",
-  "description": "Download HD videos and MP3 audio streams from YouTube, TikTok, Instagram, X (Twitter), Facebook, Pinterest & Reddit for free.",
+  "name": "LinkSave — Online Video Converter & Transcoder",
+  "description": "Online video converter and format transcoder. Extract audio from public links or convert public videos to HD MP4 and MP3.",
   "start_url": "/",
   "background_color": "#020617",
   "theme_color": "#020617",
@@ -14,5 +14,14 @@
       "sizes": "512x512",
       "purpose": "any maskable"
     }
-  ]
+  ],
+  "share_target": {
+    "action": "/youtube-video-downloader/",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
 }
