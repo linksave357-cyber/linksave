@@ -4,25 +4,25 @@
   const steps = [
     {
       number: '01',
-      title: '1. Paste',
-      subtitle: 'Copy & Paste URL',
-      description: 'Copy the video link from Instagram, TikTok, X, or any platform, then paste it into the LinkSave search bar.',
+      title: '1. Paste Link',
+      subtitle: 'Copy Video or Shorts URL',
+      description: 'Copy the URL of any YouTube video, YouTube Shorts, or supported media link, then paste it into LinkSave.',
       icon: Clipboard,
       gradient: 'from-blue-500 to-indigo-500'
     },
     {
       number: '02',
-      title: '2. Analyze',
-      subtitle: 'Instant Extraction',
-      description: 'Our engine quickly processes the video URL, removing watermarks and finding all available qualities & audio options.',
+      title: '2. Select Format',
+      subtitle: 'MP3 Audio or HD MP4',
+      description: 'Choose your desired output format: convert to 320kbps high-quality MP3 audio or Full HD 1080p MP4 video.',
       icon: Cpu,
       gradient: 'from-indigo-500 to-purple-500'
     },
     {
       number: '03',
-      title: '3. Save',
-      subtitle: 'One-Click Download',
-      description: 'Choose your desired resolution (1080p, 720p, or MP3 audio) and click Download to save the file straight to your device.',
+      title: '3. Save & Download',
+      subtitle: 'Instant Free Download',
+      description: 'Click Download to save the converted MP3 or MP4 file directly to your mobile phone or computer.',
       icon: Download,
       gradient: 'from-purple-500 to-pink-500'
     }

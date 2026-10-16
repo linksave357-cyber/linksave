@@ -76,21 +76,71 @@
   </head>
   <body class="bg-slate-950 text-slate-100 font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-cyan-500 selection:text-white min-h-screen">
     <div id="app">
-      <header class="border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-500 via-sky-600 to-rose-500 flex items-center justify-center shadow-lg shadow-cyan-500/20">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-            </div>
-            <a href="https://linksaves.com/" class="text-xl font-extrabold tracking-tight text-white">Link<span class="text-cyan-400">Save</span></a>
+      <!-- Left Side Skyscraper Banner -->
+      <aside class="hidden min-[1440px]:flex fixed top-24 left-3 xl:left-5 2xl:left-9 z-20 flex-col pointer-events-auto" aria-label="Left Skyscraper Advertisement">
+        <div class="bg-slate-900/85 backdrop-blur-md border border-slate-700/80 rounded-[14px] p-1.5 shadow-2xl flex flex-col items-center">
+          <div class="w-full flex items-center justify-between px-1 pb-1">
+            <span class="text-[9px] font-bold uppercase tracking-wider text-slate-500">Partner</span>
           </div>
-          <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
-            <a href="https://linksaves.com/" class="hover:text-cyan-400 transition-colors">Home</a>
-            <a href="https://linksaves.com/tiktok-video-downloader-no-watermark/" class="text-cyan-400 font-bold">TikTok Saver</a>
-            <a href="https://linksaves.com/instagram-reels-downloader/" class="hover:text-cyan-400 transition-colors">Instagram Reels</a>
-            <a href="https://linksaves.com/youtube-video-downloader/" class="hover:text-cyan-400 transition-colors">YouTube Downloader</a>
-            <a href="https://linksaves.com/youtube-to-mp3/" class="hover:text-cyan-400 transition-colors">YouTube to MP3</a>
-          </nav>
+          <div class="w-[160px] h-[600px] overflow-hidden flex justify-center items-center rounded-lg bg-slate-950/50">
+            <a href="https://beta.publishers.adsterra.com/referral/jd2AQmNfHi" target="_blank" rel="nofollow noopener noreferrer" class="block w-[160px] h-[600px] hover:opacity-90 transition-opacity">
+              <img src="https://landings-cdn.adsterratech.com/referralBanners/gif/160x600_adsterra_reff.gif" alt="Join Adsterra Monetization Network" width="160" height="600" loading="lazy" class="w-[160px] h-[600px] object-cover block" />
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right Side Skyscraper Banner -->
+      <aside class="hidden min-[1440px]:flex fixed top-36 right-3 xl:right-5 2xl:right-9 z-20 flex-col pointer-events-auto" aria-label="Right Skyscraper Advertisement">
+        <div class="bg-slate-900/85 backdrop-blur-md border border-slate-700/80 rounded-[14px] p-1.5 shadow-2xl flex flex-col items-center">
+          <div class="w-full flex items-center justify-between px-1 pb-1">
+            <span class="text-[9px] font-bold uppercase tracking-wider text-slate-500">Partner</span>
+          </div>
+          <div class="w-[160px] h-[600px] overflow-hidden flex justify-center items-center rounded-lg bg-slate-950/50">
+            <a href="https://beta.publishers.adsterra.com/referral/jd2AQmNfHi" target="_blank" rel="nofollow noopener noreferrer" class="block w-[160px] h-[600px] hover:opacity-90 transition-opacity">
+              <img src="https://landings-cdn.adsterratech.com/referralBanners/gif/160x600_adsterra_reff.gif" alt="Join Adsterra Monetization Network" width="160" height="600" loading="lazy" class="w-[160px] h-[600px] object-cover block" />
+            </a>
+          </div>
+        </div>
+      </aside>
+            <!-- Top Navigation Matching Homepage -->
+      <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16">
+            <a href="/" class="flex items-center gap-3 group text-left focus:outline-none">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-500 p-0.5 shadow-lg shadow-blue-500/20">
+                <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                </div>
+              </div>
+              <div>
+                <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-100 to-blue-400 bg-clip-text text-transparent">
+                  LinkSave
+                </span>
+                <span class="block text-[10px] font-semibold text-blue-400/90 tracking-wider uppercase -mt-1">
+                  Video Converter
+                </span>
+              </div>
+            </a>
+            <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+              <a href="/youtube-video-downloader/" class="px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-900/80 rounded-lg transition-colors">Video Downloader</a>
+              <a href="/youtube-to-mp3/" class="px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-900/80 rounded-lg transition-colors">Audio (MP3)</a>
+              <a href="/youtube-to-mp4/" class="px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-900/80 rounded-lg transition-colors">Video (MP4)</a>
+              <a href="/youtube-shorts-downloader/" class="px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-900/80 rounded-lg transition-colors">Shorts Downloader</a>
+              <a href="/how-to-download-youtube-videos/" class="px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-900/80 rounded-lg transition-colors">Media Guide</a>
+              <a href="https://microsoftedge.microsoft.com/addons/detail/linksave-video-audio-/ipneiigdjchdffpkailbdajdihcpgigd" target="_blank" rel="noopener noreferrer" class="px-3 py-2 text-xs font-semibold text-blue-400 hover:text-blue-300 hover:bg-blue-500/10 rounded-lg transition-colors flex items-center gap-1">
+                <span>Edge Add-on</span>
+              </a>
+            </nav>
+            <div class="hidden sm:flex items-center gap-3">
+              <div class="hidden xl:flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-semibold text-blue-400">
+                <span>100% Free &amp; Safe</span>
+              </div>
+              <a href="#downloader" class="relative inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-xs sm:text-sm shadow-md shadow-blue-500/20">
+                <span>Convert Video</span>
+              </a>
+            </div>
+          </div>
         </div>
       </header>
 
@@ -108,6 +158,21 @@
           <p class="mt-6 text-base sm:text-xl text-slate-400 max-w-2xl mx-auto font-normal leading-relaxed">
             Download TikTok videos without any watermark in high-definition 1080p MP4. Free, fast, and unlimited TikTok video saving on iPhone, Android, and PC.
           </p>
+
+          <div class="mt-6 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm font-semibold text-slate-300">
+            <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <span>Fast Speed</span>
+            </div>
+            <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+              <span>Simple &amp; Free</span>
+            </div>
+            <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><line x1="12" x2="12.01" y1="18" y2="18"/></svg>
+              <span>Mobile Friendly</span>
+            </div>
+          </div>
 
           <div class="mt-10">
             <section id="downloader" class="relative max-w-4xl mx-auto px-0 sm:px-4 pt-3 sm:pt-6 pb-6 sm:pb-12 w-full">
@@ -151,7 +216,7 @@
                     <div class="absolute top-0 left-0 right-0 h-3 bg-gradient-to-b from-[#0A0F1D] to-transparent z-10 pointer-events-none"></div>
 
                     <iframe
-                      src="https://cnvmp3.com/v8/"
+                      src="https://cnvmp3.com/v55"
                       title="LinkSave Media Engine"
                       scrolling="no"
                       class="w-full border-0 absolute left-0 overflow-hidden iframe-crop"
@@ -171,6 +236,19 @@
                     <button type="button" class="w-full py-2.5 px-3 rounded-xl border-2 border-rose-500 bg-slate-950/80 hover:bg-rose-500/10 text-white font-bold text-xs sm:text-sm transition-all duration-200 flex items-center justify-center active:scale-95 shadow-lg shadow-rose-500/10 cursor-pointer">
                       MP3 / Audio Only
                     </button>
+                  </div>
+
+                  <!-- Install LinkSave as App Banner (<1mb size only) -->
+                  <div class="mt-3 p-4 sm:p-5 rounded-2xl bg-black/70 border border-slate-800 shadow-xl text-left transition-all">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                      <h3 class="text-white font-bold text-sm sm:text-base tracking-tight">
+                        Install LinkSave as App <span class="text-cyan-400 text-xs font-normal">(&lt;1mb size only)</span>
+                      </h3>
+                      <button id="pwa-install-btn" type="button" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold text-xs sm:text-sm shadow-lg shadow-cyan-500/20 active:scale-95 transition-all duration-200 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                        <span>Install App</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
 
@@ -261,16 +339,53 @@
         </section>
       </main>
 
-      <footer class="border-t border-slate-900 bg-slate-950 py-8">
-        <div class="max-w-7xl mx-auto px-4 text-center space-y-4 text-xs text-slate-500">
-          <div class="flex flex-wrap justify-center gap-6 font-semibold text-slate-400">
-            <a href="https://linksaves.com/" class="hover:text-cyan-400 transition-colors">Home</a>
-            <a href="https://linksaves.com/about/" class="hover:text-cyan-400 transition-colors">About Us</a>
-            <a href="https://linksaves.com/contact/" class="hover:text-cyan-400 transition-colors">Contact Us</a>
-            <a href="https://linksaves.com/privacy-policy/" class="hover:text-cyan-400 transition-colors">Privacy Policy</a>
-            <a href="https://linksaves.com/terms/" class="hover:text-cyan-400 transition-colors">Terms of Service</a>
+            <footer class="border-t border-slate-900 bg-slate-950 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 text-left">
+            <div class="space-y-4">
+              <span class="text-xl font-extrabold text-white tracking-tight">LinkSave</span>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Fast and free online video downloader and high-bitrate MP3 audio converter. Safe, browser-based media conversion with no registration and no software installation required.
+              </p>
+              <div>
+                <a href="https://microsoftedge.microsoft.com/addons/detail/linksave-video-audio-/ipneiigdjchdffpkailbdajdihcpgigd" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-xs font-semibold text-blue-400 hover:text-blue-300 transition">
+                  Official Edge Browser Add-on
+                </a>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Video Downloaders</h4>
+              <ul class="space-y-2 text-xs text-slate-400">
+                <li><a href="/youtube-video-downloader/" class="hover:text-white hover:underline transition">YouTube Video Downloader</a></li>
+                <li><a href="/youtube-shorts-downloader/" class="hover:text-white hover:underline transition">YouTube Shorts Downloader</a></li>
+                <li><a href="/tiktok-video-downloader-no-watermark/" class="hover:text-white hover:underline transition">TikTok Downloader (No Watermark)</a></li>
+                <li><a href="/instagram-reels-downloader/" class="hover:text-white hover:underline transition">Instagram Reels Downloader</a></li>
+                <li><a href="/facebook-video-downloader/" class="hover:text-white hover:underline transition">Facebook Video Downloader</a></li>
+                <li><a href="/pinterest-video-downloader/" class="hover:text-white hover:underline transition">Pinterest Video Downloader</a></li>
+                <li><a href="/linkedin-video-downloader/" class="hover:text-white hover:underline transition">LinkedIn Video Downloader</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Audio &amp; Converters</h4>
+              <ul class="space-y-2 text-xs text-slate-400">
+                <li><a href="/youtube-to-mp3/" class="hover:text-white hover:underline transition">YouTube to MP3 (320kbps)</a></li>
+                <li><a href="/youtube-to-mp4/" class="hover:text-white hover:underline transition">YouTube to MP4 (1080p HD)</a></li>
+                <li><a href="/how-to-download-youtube-videos/" class="hover:text-white hover:underline transition">Download Guide &amp; FAQ</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Company &amp; Legal</h4>
+              <ul class="space-y-2 text-xs text-slate-400">
+                <li><a href="/about/" class="hover:text-white hover:underline transition">About LinkSave</a></li>
+                <li><a href="/contact/" class="hover:text-white hover:underline transition">Contact &amp; DMCA Inquiries</a></li>
+                <li><a href="/privacy-policy/" class="hover:text-white hover:underline transition">Privacy Policy</a></li>
+                <li><a href="/terms/" class="hover:text-white hover:underline transition">Terms of Service</a></li>
+              </ul>
+            </div>
           </div>
-          <p>&copy; 2026 LinkSave. Online Video Downloader.</p>
+          <div class="pt-8 border-t border-slate-900 text-center text-xs text-slate-500">
+            <p>&copy; 2026 LinkSave. All rights reserved. Free Online Video Downloader &amp; MP3 Converter.</p>
+          </div>
         </div>
       </footer>
     </div>

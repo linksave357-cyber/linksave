@@ -44,35 +44,47 @@
       <!-- Desktop Navigation -->
       <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
         <a 
-          href="{baseUrl}youtube-video-downloader/"
-          class="px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-900/80 rounded-lg transition-colors"
-        >
-          Video Converter
-        </a>
-        <a 
           href="{baseUrl}youtube-to-mp3/"
           class="px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-900/80 rounded-lg transition-colors"
         >
-          Audio (MP3)
+          YouTube to MP3
         </a>
         <a 
           href="{baseUrl}youtube-to-mp4/"
           class="px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-900/80 rounded-lg transition-colors"
         >
-          Video (MP4)
+          YouTube to MP4
         </a>
         <a 
           href="{baseUrl}youtube-shorts-downloader/"
           class="px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-900/80 rounded-lg transition-colors"
         >
-          Shorts Converter
+          YouTube Shorts
         </a>
         <a 
-          href="{baseUrl}how-to-download-youtube-videos/"
+          href="{baseUrl}youtube-video-downloader/"
           class="px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-900/80 rounded-lg transition-colors"
         >
-          Media Guide
+          Video Downloader
         </a>
+        <a 
+          href="{baseUrl}tiktok-video-downloader-no-watermark/"
+          class="px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-900/80 rounded-lg transition-colors"
+        >
+          TikTok
+        </a>
+        <a 
+          href="{baseUrl}instagram-reels-downloader/"
+          class="px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-900/80 rounded-lg transition-colors"
+        >
+          Reels
+        </a>
+        <button
+          on:click={() => scrollToSection('platforms')}
+          class="px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-900/80 rounded-lg transition-colors cursor-pointer"
+        >
+          All Converters
+        </button>
         <a 
           href="https://microsoftedge.microsoft.com/addons/detail/linksave-video-audio-/ipneiigdjchdffpkailbdajdihcpgigd"
           target="_blank"
@@ -119,34 +131,64 @@
   {#if mobileMenuOpen}
     <div class="lg:hidden px-4 pt-2 pb-6 space-y-2 bg-slate-950/95 border-b border-slate-800">
       <a
-        href="{baseUrl}youtube-video-downloader/"
-        class="block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-white"
-      >
-        Video Downloader
-      </a>
-      <a
         href="{baseUrl}youtube-to-mp3/"
         class="block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-white"
       >
-        YouTube to MP3
+        YouTube to MP3 Converter
       </a>
       <a
         href="{baseUrl}youtube-to-mp4/"
         class="block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-white"
       >
-        YouTube to MP4
+        YouTube to MP4 Converter
       </a>
       <a
         href="{baseUrl}youtube-shorts-downloader/"
         class="block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-white"
       >
-        Shorts Downloader
+        YouTube Shorts Downloader
+      </a>
+      <a
+        href="{baseUrl}youtube-video-downloader/"
+        class="block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-white"
+      >
+        YouTube Video Downloader
+      </a>
+      <a
+        href="{baseUrl}tiktok-video-downloader-no-watermark/"
+        class="block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-white"
+      >
+        TikTok Downloader (No Watermark)
+      </a>
+      <a
+        href="{baseUrl}instagram-reels-downloader/"
+        class="block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-white"
+      >
+        Instagram Reels Downloader
+      </a>
+      <a
+        href="{baseUrl}facebook-video-downloader/"
+        class="block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-white"
+      >
+        Facebook Video Downloader
+      </a>
+      <a
+        href="{baseUrl}pinterest-video-downloader/"
+        class="block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-white"
+      >
+        Pinterest Video Downloader
+      </a>
+      <a
+        href="{baseUrl}linkedin-video-downloader/"
+        class="block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-white"
+      >
+        LinkedIn Video Downloader
       </a>
       <a
         href="{baseUrl}how-to-download-youtube-videos/"
         class="block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-white"
       >
-        Guide
+        Download Guide
       </a>
       <a
         href="https://microsoftedge.microsoft.com/addons/detail/linksave-video-audio-/ipneiigdjchdffpkailbdajdihcpgigd"

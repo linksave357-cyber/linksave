@@ -1,79 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Core Landing Page -->
   <url>
     <loc>https://linksaves.com/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
 
-  <url>
-    <loc>https://linksaves.com/youtube-video-downloader/</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-
+  <!-- High-Intent Video & Audio Converters -->
   <url>
     <loc>https://linksaves.com/youtube-to-mp3/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://linksaves.com/youtube-to-mp4/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://linksaves.com/youtube-video-downloader/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://linksaves.com/youtube-shorts-downloader/</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-
-  <url>
-    <loc>https://linksaves.com/how-to-download-youtube-videos/</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-
-  <url>
-    <loc>https://linksaves.com/instagram-reels-downloader/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://linksaves.com/tiktok-video-downloader-no-watermark/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://linksaves.com/pinterest-video-downloader/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <loc>https://linksaves.com/instagram-reels-downloader/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://linksaves.com/facebook-video-downloader/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://linksaves.com/pinterest-video-downloader/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://linksaves.com/linkedin-video-downloader/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
+  <!-- Educational Guides -->
+  <url>
+    <loc>https://linksaves.com/how-to-download-youtube-videos/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Trust, Support & Compliance Pages -->
   <url>
     <loc>https://linksaves.com/about/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://linksaves.com/contact/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://linksaves.com/privacy-policy/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://linksaves.com/terms/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>

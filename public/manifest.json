@@ -1,7 +1,7 @@
 {
-  "short_name": "LinkSave",
-  "name": "LinkSave — Online Video Converter & Transcoder",
-  "description": "Online video converter and format transcoder. Extract audio from public links or convert public videos to HD MP4 and MP3.",
+  "short_name": "LinkSaves",
+  "name": "LinkSaves — Free Online Video Downloader & Audio Converter",
+  "description": "Free online video downloader and audio converter. Save videos from YouTube, TikTok, Instagram Reels, Facebook, and extract high-bitrate 320kbps MP3 audio instantly.",
   "start_url": "/",
   "background_color": "#020617",
   "theme_color": "#020617",

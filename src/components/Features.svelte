@@ -10,11 +10,25 @@
       bg: 'bg-amber-500/10'
     },
     {
-      title: 'Direct Stream Extraction',
-      description: 'Extract audio from public links and convert web video streams with fast cloud processing.',
+      title: 'YouTube to MP3 320kbps',
+      description: 'Convert video to MP3 with our free online audio converter and extract high-bitrate 320kbps audio files.',
+      icon: Music,
+      color: 'text-purple-400',
+      bg: 'bg-purple-500/10'
+    },
+    {
+      title: 'YouTube Shorts Downloader',
+      description: 'Download your YouTube Shorts and vertical videos in clean Full HD MP4 format with fast speeds.',
       icon: Zap,
       color: 'text-blue-400',
       bg: 'bg-blue-500/10'
+    },
+    {
+      title: 'YouTube Downloader for Mobile',
+      description: 'Fully responsive for smartphones—download videos & MP3 seamlessly on iPhone (Safari) and Android (Chrome).',
+      icon: Smartphone,
+      color: 'text-cyan-400',
+      bg: 'bg-cyan-500/10'
     },
     {
       title: '100% Free & Unlimited',
@@ -24,22 +38,8 @@
       bg: 'bg-emerald-500/10'
     },
     {
-      title: 'Audio MP3 Converter',
-      description: 'Extract audio from public links directly into high-bitrate MP3 format with our format transcoder.',
-      icon: Music,
-      color: 'text-purple-400',
-      bg: 'bg-purple-500/10'
-    },
-    {
-      title: 'Universal Device Support',
-      description: 'Works seamlessly across iOS Safari, Android Chrome, Windows, macOS, Linux, and tablets.',
-      icon: Smartphone,
-      color: 'text-cyan-400',
-      bg: 'bg-cyan-500/10'
-    },
-    {
-      title: 'Safe & Secure Processing',
-      description: 'All link analysis happens securely. We do not store your download logs or track personal data.',
+      title: 'Safe Offline Backups',
+      description: 'Easily save your own YouTube videos for offline viewing or backup. No logs stored and no software needed.',
       icon: Lock,
       color: 'text-rose-400',
       bg: 'bg-rose-500/10'

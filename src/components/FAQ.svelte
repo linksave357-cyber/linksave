@@ -6,28 +6,28 @@
 
   const faqs = [
     {
-      q: 'How to extract audio from public links to MP3 for free?',
-      a: 'Paste any public video link into LinkSave, click Convert, and choose high-quality 320kbps MP3 audio format to save the sound file instantly.'
+      q: 'How to use LinkSave as a YouTube to MP3 converter online?',
+      a: 'To convert video to MP3, copy the YouTube video or Shorts link from your browser or mobile app, paste it into the LinkSave search box, and select the MP3 audio format. Our free online audio converter extracts high-quality 320kbps MP3 audio in seconds.'
     },
     {
-      q: 'How does the online video converter work?',
-      a: 'Copy the public media link from your browser or app, paste it into the LinkSave converter box, and select your preferred format.'
+      q: 'How to convert YouTube to MP4 in 1080p Full HD online?',
+      a: 'Copy the YouTube video URL, paste it into LinkSave, and select MP4 format. You can download videos in original high resolutions including 1080p Full HD, 720p, or 4K with no watermark and zero compression.'
     },
     {
-      q: 'Is LinkSave free?',
-      a: 'Yes. LinkSave provides a free online interface for downloading and converting supported media links. No registration is required.'
+      q: 'How do I download YouTube Shorts on mobile phones?',
+      a: 'LinkSave is an optimized YouTube video downloader for mobile. On iPhone (Safari) or Android (Chrome), tap Share on any YouTube Shorts video, select "Copy link", paste it into LinkSave, and tap Download.'
     },
     {
-      q: 'Where are downloaded videos saved on my device?',
-      a: 'Downloaded files are saved in your web browser\'s default "Downloads" folder (or standard files location on iPhone / Android).'
+      q: 'Can I save my own YouTube videos for offline backup?',
+      a: 'Yes! Content creators and users can easily save their own YouTube videos and download their YouTube Shorts for offline backup, archiving, or repurposing audio tracks without installing any software.'
     },
     {
-      q: 'Does LinkSave work on iPhone and Android mobile browsers?',
-      a: 'Absolutely! LinkSave is fully optimized for mobile devices. On iOS Safari or Android Chrome, simply paste the link and tap Download.'
+      q: 'What audio bitrates are supported for YouTube to MP3 conversion?',
+      a: 'LinkSave supports multiple audio bitrates up to 320kbps (studio high fidelity), as well as 256kbps, 192kbps, and 128kbps, giving you the best balance between audio quality and file size.'
     },
     {
-      q: 'Do I need to install any software or browser extensions?',
-      a: 'No installation is needed! LinkSave works 100% online directly inside your web browser.'
+      q: 'Is this online video converter completely free?',
+      a: 'Yes. LinkSave provides an entirely free online video converter and audio extractor. There are no daily download limits, no subscription fees, and no registration required.'
     }
   ];
 

@@ -4,6 +4,7 @@
   import EdgeExtensionSection from './components/EdgeExtensionSection.svelte';
   import HowItWorks from './components/HowItWorks.svelte';
   import Features from './components/Features.svelte';
+  import SupportedPlatforms from './components/SupportedPlatforms.svelte';
   import FAQ from './components/FAQ.svelte';
   import Footer from './components/Footer.svelte';
   import AdBanner from './components/AdBanner.svelte';
@@ -56,6 +57,9 @@
     <!-- Value Propositions & Features -->
     <Features />
 
+    <!-- Dedicated Platform Converters Grid (Internal Crawl & User Discovery) -->
+    <SupportedPlatforms />
+
     <!-- Content Banner: Dynamic Rectangle -->
     <section class="max-w-7xl mx-auto px-4">
       <AdBanner slotType="rectangle" type="ad" />
@@ -73,9 +77,11 @@
     <BottomBanners />
   </main>
 
-  <!-- Footer with Legal Links -->
-  <Footer onOpenModal={openModal} />
+  <!-- Footer with Legal & Internal Tool Links -->
+  <Footer />
 
-  <!-- Legal & Policy Modal (AdSense Required Compliance) -->
-  <LegalModal activeModal={activeModal} onClose={closeModal} />
+  <!-- Legal & Policy Modal (Fallback) -->
+  {#if activeModal}
+    <LegalModal {activeModal} onClose={closeModal} />
+  {/if}
 </div>

@@ -3,10 +3,47 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 import tailwindcss from '@tailwindcss/vite'
 import { resolve } from 'path'
 
+const subpages = [
+  'youtube-video-downloader',
+  'youtube-to-mp3',
+  'youtube-to-mp4',
+  'youtube-shorts-downloader',
+  'how-to-download-youtube-videos',
+  'about',
+  'contact',
+  'privacy-policy',
+  'terms',
+  'instagram-reels-downloader',
+  'tiktok-video-downloader-no-watermark',
+  'pinterest-video-downloader',
+  'facebook-video-downloader',
+  'linkedin-video-downloader'
+]
+
+function devTrailingSlashPlugin() {
+  return {
+    name: 'dev-trailing-slash-middleware',
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        const [pathname, query] = (req.url || '').split('?')
+        const matched = subpages.find(route => pathname === `/${route}`)
+        if (matched) {
+          res.writeHead(301, {
+            Location: `/${matched}/${query ? `?${query}` : ''}`
+          })
+          res.end()
+          return
+        }
+        next()
+      })
+    }
+  }
+}
+
 // https://vite.dev/config/
 export default defineConfig({
   base: '/',
-  plugins: [svelte(), tailwindcss()],
+  plugins: [svelte(), tailwindcss(), devTrailingSlashPlugin()],
   build: {
     rollupOptions: {
       input: {

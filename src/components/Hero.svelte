@@ -15,24 +15,28 @@
     </div>
 
     <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight max-w-4xl mx-auto leading-[1.15]">
-      ONLINE VIDEO <br class="hidden sm:block" />
+      YOUTUBE TO MP3 &amp; <br class="hidden sm:block" />
       <span class="bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
-        CONVERTER
+        MP4 VIDEO CONVERTER
       </span>
     </h1>
 
     <p class="mt-6 text-base sm:text-xl text-slate-400 max-w-2xl mx-auto font-normal leading-relaxed">
-      Fast format transcoder to convert public media and extract audio from public links effortlessly.
+      Fast, free online video converter to convert YouTube to MP3 (320kbps) and save YouTube Shorts &amp; HD MP4 videos on mobile and desktop.
     </p>
 
-    <div class="mt-6 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm font-semibold text-slate-300">
+    <div class="mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-semibold text-slate-300">
       <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900/80 border border-slate-800">
         <Zap class="w-4 h-4 text-amber-400" />
-        <span>Fast Speed</span>
+        <span>YouTube to MP3 (320kbps)</span>
       </div>
       <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900/80 border border-slate-800">
         <ShieldCheck class="w-4 h-4 text-emerald-400" />
-        <span>Simple & Free</span>
+        <span>YouTube to MP4 (1080p HD)</span>
+      </div>
+      <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900/80 border border-slate-800">
+        <Sparkles class="w-4 h-4 text-purple-400" />
+        <span>YouTube Shorts Downloader</span>
       </div>
       <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900/80 border border-slate-800">
         <Smartphone class="w-4 h-4 text-blue-400" />
