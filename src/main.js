@@ -1,6 +1,28 @@
 import { mount } from 'svelte'
 import './app.css'
 import App from './App.svelte'
+import { CONFIG } from './lib/config.js'
+
+// Automatically inject Monetag verification tag & MultiTag script if configured
+if (typeof document !== 'undefined' && CONFIG?.monetag?.enabled) {
+  if (CONFIG.monetag.verificationCode && !document.querySelector('meta[name="monetag"]')) {
+    const meta = document.createElement('meta')
+    meta.name = 'monetag'
+    meta.content = CONFIG.monetag.verificationCode
+    document.head.appendChild(meta)
+  }
+
+  if (CONFIG.monetag.scriptUrl && !document.querySelector(`script[src="${CONFIG.monetag.scriptUrl}"]`)) {
+    const script = document.createElement('script')
+    script.src = CONFIG.monetag.scriptUrl
+    if (CONFIG.monetag.zoneId) {
+      script.setAttribute('data-zone', CONFIG.monetag.zoneId)
+    }
+    script.async = true
+    script.setAttribute('data-cfasync', 'false')
+    document.head.appendChild(script)
+  }
+}
 
 // Determine if this is the root homepage where App.svelte should mount
 const cleanPath = window.location.pathname.replace(/^\/linksave\/?/, '/').replace(/\/index\.html$/, '/')

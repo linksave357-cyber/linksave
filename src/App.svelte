@@ -11,6 +11,7 @@
   import SideBanners from './components/SideBanners.svelte';
   import BottomBanners from './components/BottomBanners.svelte';
   import LegalModal from './components/LegalModal.svelte';
+  import VpnAffiliateBanner from './components/VpnAffiliateBanner.svelte';
 
   /** @type {'privacy' | 'terms' | 'about' | 'contact' | null} */
   let activeModal = null;
@@ -37,6 +38,9 @@
   <!-- Main Hero & Downloader Engine Focus -->
   <main>
     <Hero />
+
+    <!-- High-Yield VPN Affiliate Recommendation -->
+    <VpnAffiliateBanner />
 
     <!-- Official Microsoft Edge Extension Showcase -->
     <EdgeExtensionSection />

@@ -13,11 +13,25 @@ export const CONFIG = {
   // Adsterra Smartlink (smart-link-3466727)
   smartlinkUrl: 'https://garretebonylosing.com/jhky4egutd?key=d9ca9399efd5ec18febfadefd48f7ed5',
 
-  // Monetag disabled to eliminate intrusive onclick and popup ads
+  // Monetag MultiTag & Monetization Integration
   monetag: {
-    enabled: false,
-    scriptUrl: '',
-    zoneId: ''
+    enabled: true,
+    verificationCode: '', // e.g., 'YOUR_MONETAG_VERIFICATION_CODE'
+    scriptUrl: '',        // e.g., 'https://alwingulla.com/88/tag.min.js' or MultiTag script URL
+    zoneId: ''           // e.g., '1234567'
+  },
+
+  // High-Yield Affiliate Partnerships (VPN, Privacy & Speed)
+  affiliate: {
+    vpn: {
+      enabled: true,
+      provider: 'NordVPN',
+      badge: 'Recommended for HD Media & Privacy',
+      title: 'Fast & Anonymous Video Downloads',
+      subtitle: 'Bypass video geo-restrictions on YouTube & TikTok while preventing ISP download throttling.',
+      discount: '72% OFF + 3 Mo Free',
+      url: 'https://go.nordvpn.net/aff_c?offer_id=15&aff_id=105436'
+    }
   },
 
   // Adsterra Display & Skyscraper Banners

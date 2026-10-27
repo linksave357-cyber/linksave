@@ -25,15 +25,19 @@ Integrating **Monetag** (the publisher brand of PropellerAds) alongside **Adster
 ### Step 3: Verify Site Ownership
 Monetag will ask you to verify that you own `linksaves.com`. They offer two methods:
 
-* **Method A (Easiest - HTML Tag)**:
-  Copy the meta tag they display:
-  ```html
-  <meta name="monetag" content="YOUR_VERIFICATION_CODE" />
+* **Method A (Easiest - HTML Tag or Config)**:
+  Copy the verification code (content value) and paste it into [`src/lib/config.js`](file:///c:/my-projects/linksave/src/lib/config.js) under `monetag.verificationCode`:
+  ```js
+  monetag: {
+    enabled: true,
+    verificationCode: 'YOUR_VERIFICATION_CODE',
+    ...
+  }
   ```
-  👉 **Paste this code in our chat**, and I will immediately deploy it live to `linksaves.com`!
+  👉 Or share it with me in chat, and I will place it into `config.js`!
 
 * **Method B (File Upload)**:
-  Download the verification file (e.g., `monetag12345.html`), save it into your `c:\my-projects\linksave\public\` folder, and push.
+  Download the verification file (e.g., `monetag12345.html`), save it into your `c:\my-projects\linksave\public\` folder, and deploy.
 
 Once deployed, click **Verify** on Monetag. Your site will be approved instantly!
 
@@ -42,11 +46,20 @@ Once deployed, click **Verify** on Monetag. Your site will be approved instantly
 ### Step 4: Get Your MultiTag Script
 1. Once `linksaves.com` is verified, click **Add Zone**.
 2. Select **MultiTag** (Recommended: this single tag automatically serves high-CPM formats like In-Page Push, Vignette Banners, and OnClick popunders with AI fill rate optimization).
-3. Copy the script tag provided by Monetag.
-4. Share it with me, and I will integrate it across all pages on `linksaves.com`.
+3. Copy the script tag provided by Monetag (e.g. `src="https://alwingulla.com/88/tag.min.js"` and `data-zone="1234567"`).
+4. Paste the URL and zone into [`src/lib/config.js`](file:///c:/my-projects/linksave/src/lib/config.js):
+  ```js
+  monetag: {
+    enabled: true,
+    verificationCode: 'YOUR_CODE',
+    scriptUrl: 'https://alwingulla.com/88/tag.min.js',
+    zoneId: 'YOUR_ZONE_ID'
+  }
+  ```
+  Our loader automatically serves it across both the homepage and all subpages!
 
 ---
 
-## Where the Code is Placed in LinkSave:
+## Configuration Location:
 * **Config file**: [`src/lib/config.js`](file:///c:/my-projects/linksave/src/lib/config.js) under `CONFIG.monetag`.
-* **HTML Head**: [`index.html`](file:///c:/my-projects/linksave/index.html) ready with the Monetag comment block.
+* **Affiliate Offers**: [`src/lib/config.js`](file:///c:/my-projects/linksave/src/lib/config.js) under `CONFIG.affiliate.vpn`.
